@@ -62,6 +62,10 @@ if (DEBUG_ON_PICO)
         set_target_properties(debugprobe PROPERTIES
             OUTPUT_NAME "debugprobe_on_pico2"
         )
+    elseif (PICO_BOARD STREQUAL "seeed_xiao_rp2040")
+        set_target_properties(debugprobe PROPERTIES
+            OUTPUT_NAME "debugprobe_on_seeed_xiao_rp2040"
+        )
     else ()
         message(SEND_ERROR "Unsupported board ${PICO_BOARD}")
     endif ()
