@@ -63,6 +63,20 @@ cd build-pico2
 cmake -DDEBUG_ON_PICO=1 -DPICO_BOARD=pico2 -DPICO_PLATFORM=rp2350 ../
 ```
 
+# Building for XIAO_RP2040
+
+```cmake -DDEBUG_ON_PICO=1 -DPICO_BOARD=seeed_xiao_rp2040 -DPICO_PLATFORM=rp2040```
+
+# XIAO_RP2040 debug pinout
+
+|Pin|XIAO|Function |
+|---|----|---------|
+|P26|D0  |SWD Clock|
+|P27|D1  |SWD IO   |
+|P28|D2  |~Reset   |
+|P0 |D6  |TX       |
+|P1 |D7  |RX       |
+
 # TODO
 - AutoBaud selection, as PIO is a capable frequency counter
 - Possibly include RTT support
