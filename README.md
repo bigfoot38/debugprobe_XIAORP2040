@@ -6,6 +6,20 @@ Firmware source for the Raspberry Pi Debug Probe SWD/UART accessory. Can also be
 
 [Raspberry Pi Pico product page](https://www.raspberrypi.com/products/raspberry-pi-pico/)
 
+# Fork Notes
+
+This version is adapted for the XIAO RP2040 board.
+
+This table shows the pinout of this version.
+
+
+|Pin|XIAO|Function |
+|---|----|---------|
+|P26|D0  |SWD Clock|
+|P27|D1  |SWD IO   |
+|P28|D2  |~Reset   |
+|P0 |D6  |TX       |
+|P1 |D7  |RX       |
 
 # Documentation
 
@@ -66,16 +80,6 @@ cmake -DDEBUG_ON_PICO=1 -DPICO_BOARD=pico2 -DPICO_PLATFORM=rp2350 ../
 # Building for XIAO_RP2040
 
 ```cmake -DDEBUG_ON_PICO=1 -DPICO_BOARD=seeed_xiao_rp2040 -DPICO_PLATFORM=rp2040```
-
-# XIAO_RP2040 debug pinout
-
-|Pin|XIAO|Function |
-|---|----|---------|
-|P26|D0  |SWD Clock|
-|P27|D1  |SWD IO   |
-|P28|D2  |~Reset   |
-|P0 |D6  |TX       |
-|P1 |D7  |RX       |
 
 # TODO
 - AutoBaud selection, as PIO is a capable frequency counter
